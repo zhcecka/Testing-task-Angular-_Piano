@@ -1,0 +1,15 @@
+<button (click)="goBack()" class="button__back">
+    <i class="material-icons">arrow_back</i>
+</button>
+
+<div class="not-found" *ngIf="!(answers$ | async).length">
+    NOT FOUND
+</div>
+<div class="answer" *ngFor="let answer of answers$ | async">
+    <div class="answer__author" >
+        <img [src]="answer.owner.profile_image">
+        {{answer.owner.display_name}}
+    </div>
+    <div class="answer__text" [innerHTML]="answer.body">
+    </div>
+</div>

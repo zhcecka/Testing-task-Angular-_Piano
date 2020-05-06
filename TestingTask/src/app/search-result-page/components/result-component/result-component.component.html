@@ -1,0 +1,17 @@
+<button (click)="goBack()" class="button__back">
+    <i class="material-icons">arrow_back</i>
+</button>
+
+<div class="not-found" *ngIf="!(isLoadingAnswer$ | async) && !(items$ | async).length">
+    NOT FOUND
+</div>
+<div [ngClass]="{result: !(isLoadingAnswer$ | async) && (itemsQuickView$ | async).length || (isLoading$ | async)}" 
+     *ngIf="!(isLoadingAnswer$ | async) && (items$ | async).length">
+    <app-table [items]="(items$ | async)"></app-table>
+</div>
+<div *ngIf="!(isLoadingAnswer$ | async) && (itemsQuickView$ | async).length || (isLoading$ | async)" class="quick-view">
+    <div *ngIf="(isLoading$ | async)" class="loader"></div>
+    <app-table *ngIf="!(isLoading$ | async)" [items]="(itemsQuickView$ | async)"></app-table>
+</div>
+<button *ngIf="!(isLoadingAnswer$ | async) && (itemsQuickView$ | async).length || (isLoading$ | async)" class="button button-primary button-block fixed-footer" (click)="onCloseQuickView()"> Close </button>
+<div *ngIf="(isLoadingAnswer$ | async)" class="loader"></div>

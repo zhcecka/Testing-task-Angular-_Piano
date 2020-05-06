@@ -1,0 +1,40 @@
+<form class="popup" [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  
+    <div *ngIf="!isLogin">
+        <div class="popup__input-lables">
+            <label> Name: </label>
+        </div>
+        <input [ngClass]="{popup__invalid: isShowValidation(name)}" type="text" formControlName="name">
+
+        <div class="popup__error-message" *ngIf="isShowValidation(name)">
+            <span>Field is required</span>
+        </div>
+    </div>
+
+    <div>
+        <div class="popup__input-lables">
+            <label> Email: </label>
+        </div>
+        <input [ngClass]="{popup__invalid: isShowValidation(username)}" type="email" formControlName="username" required>
+
+        <div class="popup__error-message" *ngIf="isShowValidation(username)">
+            <span>invalid email</span>
+        </div>
+    </div>
+  
+    <div>
+        <div class="popup__input-lables">
+            <label> Password: </label>
+            <a *ngIf="isLogin" (click)="forgotPassword()">Forgot password</a>
+        </div>
+        <input [ngClass]="{popup__invalid: isShowValidation(password)}" type="password" formControlName="password" required>
+
+        <div class="popup__error-message" *ngIf="isShowValidation(password)">
+            <span>Password must be at least 6 characters long and contain uppercase and lowercase letters and numbers</span>
+        </div>
+
+    </div>
+
+    <button class="button button-primary button-block" type="submit" [disabled]="!userForm.valid"> {{isLogin ? 'Login' : 'Registration'}} </button>
+      
+</form>

@@ -1,0 +1,7 @@
+<div *ngIf="(isLoading$ | async)" class="loader"></div>
+
+
+<div *ngIf="!(isLoading$ | async)" class="search">
+    <input type="text" [formControl]="search">
+    <button class="button button-primary" (click)='onSearch()'> SEARCH </button>
+</div>

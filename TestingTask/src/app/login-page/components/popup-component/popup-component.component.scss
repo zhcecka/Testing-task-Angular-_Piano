@@ -1,0 +1,14 @@
+.popup{
+    &__input-lables{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__error-message{
+        font-size: 0.8rem;
+        color: var(--primary-color);
+    }
+    &__invalid{
+        border-color: var(--primary-color);
+    }
+}

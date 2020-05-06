@@ -1,0 +1,12 @@
+.header{
+    height: 50px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    &__title{
+        padding: 8px;
+        cursor: pointer;
+    }
+}

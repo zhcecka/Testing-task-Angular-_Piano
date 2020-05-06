@@ -1,0 +1,16 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    .answer{
+        display: flex;
+        margin-bottom: 50px;
+
+        &__author{
+            text-align: center;
+        }
+
+        &__text{
+            padding: 25px;
+        }
+    }
+}

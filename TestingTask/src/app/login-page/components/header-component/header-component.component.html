@@ -1,0 +1,10 @@
+<div class="header">
+    <div (click)="onClickLogo()" class="header__title">
+        <span>Stackoverflow</span>
+    </div>
+    <div class="header__buttons">
+        <button class="button" (click)="onClick('login')" *ngIf="isLoginRoute()"> Login </button>
+        <button class="button" (click)="onClick('signup')" *ngIf="isLoginRoute()"> Sign up </button>
+        <button class="button" (click)="onClick('logout')" *ngIf="!isLoginRoute()"> Logout </button>
+    </div>
+</div>

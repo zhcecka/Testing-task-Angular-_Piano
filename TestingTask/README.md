@@ -1,3 +1,11 @@
+npm version 6.14.4
+nodejs version 12.16.1
+
+Before starting project you should:
+    1. run npm i in /TestingTask and /TestingTask/server directorys
+    2. run npm start in /TestingTask directory to run dev server on `http://localhost:4200/`
+    3. run npm start in /TestingTask/server directory to run dev server on `http://localhost:3000/` 
+
 # TestingTask
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.

@@ -1,0 +1,17 @@
+.result{
+    overflow: scroll;
+    height: 40vh;
+}
+.quick-view{
+    position: fixed;
+    border-top: 10px solid var(--dark-color);
+    bottom: 36px;
+    height: 40vh;
+    width: 100%;
+    background-color: #fff;
+    overflow: scroll;
+}
+.fixed-footer{
+    position: fixed;
+    bottom: 0;
+}
